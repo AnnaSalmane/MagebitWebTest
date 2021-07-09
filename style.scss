@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-text-primary: #131821;
+  --clr-text-secondary: #6a707b;
+  --clr-border-primary: #e3e3e4;
+  --clr-border-secondary: #4066a5;
+  --clr-border-socials: #e2e3e4;
+  --clr-background-primary: #ffffff;
+  --clr-background-secondary: #f2f5fa;
+  --clr-error: #ff6666;
+  --clr-active-link: #233759;
+  --clr-social-facebook-hover: #4267b2;
+  --clr-social-facebook-active: #2f4a80;
+  --clr-social-instagram-hover: #c13584;
+  --clr-social-instagram-active: #8f2762;
+  --clr-social-twitter-hover: #1da1f2;
+  --clr-social-twitter-active: #177fbf;
+  --clr-social-youtube-hover: #ff0000;
+  --clr-social-youtube-active: #cc0000;
+}
+
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--clr-background-primary) 0%,
+    var(--clr-background-secondary) 100%
+  );
+  font-family: Arial;
+  font-size: 16px;
+  color: var(--clr-text-secondary);
+}
+.image_summer {
+  position: absolute;
+  display: flex;
+  height: 67.5rem;
+  width: 49.5%;
+  left: 50.5%;
+  top: 0px;
+  background: url(img/image_summer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.base {
+  background: white;
+  position: absolute;
+  display: block;
+  min-width: 680px;
+  height: 67.5rem;
+
+  .topbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 101px;
+    // min-width: 26.88rem;
+    .logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      min-width: 24.3%;
+      .pineaplle {
+        padding-right: 15px;
+      }
+      .name {
+        padding-bottom: 4px;
+      }
+    }
+    .links {
+      .nav_links {
+        display: flex;
+        list-style-type: none;
+        li {
+          margin-left: 30px;
+          text-decoration: none;
+          a {
+            text-decoration: none;
+            line-height: 26px;
+            color: var(--clr-text-secondary);
+          }
+        }
+      }
+    }
+  }
+  .body {
+    h1 {
+      font-family: Georgia;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 44px;
+      color: var(--clr-text-primary);
+      margin: 234px 141px 15px 140px;
+    }
+    #secondH1 {
+      margin: 32px 20.5% 2.6% 20.5%;
+    }
+    p {
+      line-height: 28px;
+      margin: 0px 20.5% 50px 20.6%;
+    }
+
+    .success {
+      margin: 31px 20.5% 0 20.6%;
+      height: 70px;
+      width: 44px;
+    }
+
+    .email_input {
+      display: flex;
+      width: 663px;
+      height: 70px;
+      margin-left: 14.7%;
+      border: 1px solid var(--clr-border-primary);
+      border-left: 4px solid var(--clr-border-secondary);
+      box-sizing: border-box;
+      &:hover {
+        border: 1px solid var(--clr-border-secondary);
+        border-left: 4px solid var(--clr-border-secondary);
+        box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+        color: var(--clr-border-secondary);
+        img {
+          filter: opacity(1) drop-shadow(0 0 0 var(--clr-border-secondary));
+        }
+      }
+      #email {
+        width: 84%;
+        background: var(--clr-background-primary);
+        border: none;
+        padding-left: 40px;
+        outline: none;
+
+        &::placeholder {
+          font-size: 16px;
+          font-family: Arial;
+        }
+
+        &:focus {
+          box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+        }
+      }
+      #submit {
+        width: 16%;
+        background: var(--clr-background-primary);
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .errors-list {
+      padding-left: 14.7%;
+      padding-top: 10px;
+      color: var(--clr-error);
+    }
+    .checkbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 400px;
+      height: 28px;
+      margin: 43px 140px 50px 140px;
+      input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        appearance: none;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        background: var(--clr-background-primary);
+        border: 1px solid var(--clr-border-primary);
+        box-sizing: border-box;
+        border-radius: 3px;
+        &::after {
+          content: "\2714";
+          color: var(--clr-background-primary);
+        }
+        &:checked {
+          background: var(--clr-border-secondary);
+        }
+      }
+      span {
+        width: 89.5%;
+        line-height: 28px;
+        a {
+          color: var(--clr-text-primary);
+          &:hover {
+            color: var(--clr-border-secondary);
+          }
+          &:active {
+            color: var(--clr-active-link);
+          }
+        }
+      }
+    }
+    hr {
+      margin: auto;
+      height: 1px;
+      width: 400px;
+      background-color: var(--clr-border-primary);
+      border: none;
+    }
+    .social_icons {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 15.19rem;
+      ul {
+        display: flex;
+        list-style-type: none;
+        width: 241px;
+        margin-top: 7.2%;
+        a {
+          display: flex;
+          margin-right: 19px;
+          width: 46px;
+          height: 46px;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          border: 2px solid var(--clr-border-socials);
+          border-radius: 50%;
+          i {
+            color: var(--clr-text-primary);
+            opacity: 0.3;
+          }
+          &:hover {
+            box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+            // border: none;
+          }
+          &:hover i {
+            color: var(--clr-background-primary);
+            opacity: 1;
+          }
+          &.facebook {
+            &:hover {
+              background: var(--clr-social-facebook-hover);
+              border: 2px solid var(--clr-social-facebook-hover);
+            }
+            &:active {
+              background: var(--clr-social-facebook-active);
+              border: 2px solid var(--clr-social-facebook-active);
+            }
+          }
+          &.instagram {
+            &:hover {
+              background: var(--clr-social-instagram-hover);
+              border: 2px solid var(--clr-social-instagram-hover);
+            }
+            &:active {
+              background: var(--clr-social-instagram-active);
+              border: 2px solid var(--clr-social-instagram-active);
+            }
+          }
+          &.twitter {
+            &:hover {
+              background: var(--clr-social-twitter-hover);
+              border: 2px solid var(--clr-social-twitter-hover);
+            }
+            &:active {
+              background: var(--clr-social-twitter-active);
+              border: 2px solid var(--clr-social-twitter-active);
+            }
+          }
+          &.youtube {
+            &:hover {
+              background: var(--clr-social-youtube-hover);
+              border: 2px solid var(--clr-social-youtube-hover);
+            }
+            &:active {
+              background: var(--clr-social-youtube-active);
+              border: 2px solid var(--clr-social-youtube-active);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .image_summer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+  }
+  .base {
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    width: 100%;
+    height: 100vh;
+
+    background: url("img/image_summer.png");
+    margin-left: 0;
+
+    .topbar {
+      margin: 0px;
+      padding-inline: 20px;
+      height: 66px;
+      width: 100%;
+      align-items: center;
+      background: linear-gradient(
+        180deg,
+        var(--clr-background-primary) 0%,
+        var(--clr-background-secondary) 100%
+      );
+      .logo {
+        .name {
+          display: none;
+        }
+        .pineaplle {
+          padding-right: 0;
+        }
+      }
+      .links {
+        .nav_links {
+          li {
+            margin-left: 10px;
+            a {
+              line-height: 24px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .body {
+      position: absolute;
+      margin: auto auto;
+
+      width: 335px;
+      height: 371px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+        180deg,
+        var(--clr-background-primary) 0%,
+        var(--clr-background-secondary) 100%
+      );
+
+      h1 {
+        font-size: 24px;
+        line-height: 34px;
+        margin: 30px 20px 10px 20px;
+      }
+      #secondH1 {
+        margin: 39px 10px 10px 20px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 26px;
+        margin: 0px 20px 20px 20px;
+      }
+      .success {
+        margin: 30px 271px 0 20px;
+        height: 70px;
+        width: 44px;
+      }
+
+      .email_input {
+        width: 295px;
+        height: 60px;
+        margin-left: 20px;
+        #email {
+          width: 84%;
+          background: var(--clr-background-primary);
+          border: none;
+          padding-left: 15px;
+          outline: none;
+
+          &::placeholder {
+            font-size: 16px;
+            font-family: Arial;
+          }
+        }
+      }
+      .checkbox {
+        width: 295px;
+        height: 28px;
+        margin: 20px;
+        span {
+          width: 254px;
+          line-height: 28px;
+        }
+      }
+      hr {
+        width: 295px;
+      }
+      .social_icons {
+        padding-bottom: 30px;
+        ul {
+          width: 214px;
+          margin-top: 20px;
+          a {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
